@@ -205,7 +205,6 @@ body {
     top: 10%;
     left: 10%;
     opacity: 0.1;
-    animation: float 20s infinite ease-in-out;
 }
 
 .floating-particles::after {
@@ -215,12 +214,6 @@ body {
     right: 10%;
     background: radial-gradient(circle, var(--neon-blue), transparent);
     opacity: 0.1;
-    animation: float 25s infinite ease-in-out reverse;
-}
-
-@keyframes float {
-    0%, 100% { transform: translate(0, 0); }
-    50% { transform: translate(30px, -30px); }
 }
 
 .hero-content {
@@ -258,12 +251,6 @@ body {
     font-weight: 600;
     color: var(--neon-green);
     box-shadow: var(--glow-green);
-    animation: glow-pulse 2s ease-in-out infinite;
-}
-
-@keyframes glow-pulse {
-    0%, 100% { box-shadow: var(--glow-green); }
-    50% { box-shadow: 0 0 30px rgba(0, 255, 65, 0.6); }
 }
 
 .badge-icon {
@@ -302,7 +289,6 @@ body {
     border-radius: 50%;
     border: 2px solid var(--neon-green);
     box-shadow: inset 0 0 40px rgba(0, 255, 65, 0.2), 0 0 50px rgba(0, 255, 65, 0.3);
-    animation: glow-pulse 2s ease-in-out infinite;
 }
 
 .profile-badge {
@@ -355,7 +341,6 @@ body {
     overflow: hidden;
     max-width: 600px;
     margin: 0 auto;
-    animation: fadeInUp 1s ease-out;
 }
 
 .terminal-header {
@@ -403,26 +388,9 @@ body {
 }
 
 .typing-text {
-    animation: typing 2s steps(40, end), blink .75s step-end infinite;
-}
-
-@keyframes typing {
-    from {
-        width: 0;
-    }
-}
-
-@keyframes blink {
-    0%, 50% {
-        border-right: 3px solid var(--neon-green);
-    }
-    51%, 100% {
-        border-right: transparent;
-    }
 }
 
 .blinking-cursor {
-    animation: blink 0.75s step-end infinite;
 }
 
 .hero-tagline {
@@ -439,7 +407,6 @@ body {
     justify-content: center;
     flex-wrap: wrap;
     margin-top: 3rem;
-    animation: fadeInUp 1.2s ease-out;
 }
 
 .btn {
@@ -514,17 +481,6 @@ body {
 
 .btn-icon {
     font-size: 1.3rem;
-}
-
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
 }
 
 /* ========================================
@@ -925,7 +881,7 @@ body {
     border-radius: 1rem;
     transition: var(--transition);
     backdrop-filter: blur(10px);
-display: flex;
+    display: flex;
     flex-direction: column;
     position: relative;
     overflow: hidden;
@@ -942,48 +898,6 @@ display: flex;
     text-transform: uppercase;
     letter-spacing: 1px;
     z-index: 10;
-}
-
-.project-badge.security {
-    background: rgba(0, 255, 65, 0.2);
-    color: var(--neon-green);
-    border: 1px solid var(--neon-green);
-}
-
-.project-badge.web {
-    background: rgba(0, 212, 255, 0.2);
-    color: var(--neon-blue);
-    border: 1px solid var(--neon-blue);
-}
-
-.project-badge.blockchain {
-    background: rgba(176, 36, 255, 0.2);
-    color: var(--neon-purple);
-    border: 1px solid var(--neon-purple);
-}
-
-.project-badge.portfolio {
-    background: rgba(255, 100, 200, 0.2);
-    color: #ff64c8;
-    border: 1px solid #ff64c8;
-}
-
-.project-badge.admin {
-    background: rgba(255, 165, 0, 0.2);
-    color: #ffa500;
-    border: 1px solid #ffa500;
-}
-
-.project-badge.social {
-    background: rgba(100, 200, 255, 0.2);
-    color: #64c8ff;
-    border: 1px solid #64c8ff;
-}
-
-.project-badge.dev {
-    background: rgba(100, 255, 100, 0.2);
-    color: #64ff64;
-    border: 1px solid #64ff64;
 }
 
 .project-card:hover {
@@ -1036,10 +950,14 @@ display: flex;
     border-left: 3px solid var(--neon-blue);
 }
 
+.highlight:hover {
+}
+
 .tech-stack {
     display: flex;
     flex-wrap: wrap;
     gap: 0.75rem;
+    align-items: center;
     margin-bottom: 1.5rem;
 }
 
@@ -1053,6 +971,9 @@ display: flex;
     border: 1px solid rgba(0, 255, 65, 0.3);
     text-transform: uppercase;
     letter-spacing: 0.5px;
+}
+
+.tech-tag:hover {
 }
 
 .project-link {

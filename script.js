@@ -149,13 +149,8 @@ window.addEventListener('scroll', () => {
    RESUME DOWNLOAD BUTTON
    ======================================== */
 
-const resumeBtn = document.querySelector('.resume-btn');
-if (resumeBtn) {
-    resumeBtn.addEventListener('click', function (e) {
-        alert('📥 Resume download feature will be enabled soon. Contact me for your copy!');
-        e.preventDefault();
-    });
-}
+// Resume download is handled by HTML href and download attribute
+
 
 /* ========================================
    GLOWING EFFECT ON HOVER FOR CARDS
